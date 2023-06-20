@@ -28,12 +28,20 @@ const AddNote = () => {
                     <label htmlFor="description" className="form-label">Description</label>
                     <input type="text" className="form-control" id="description" name="description" value={note.description} onChange={onChange} minLength={5} required />
                 </div>
+<<<<<<< HEAD
                 <div className="mb-3">
                     <label htmlFor="tag" className="form-label">Tag</label>
                     <input type="text" className="form-control" id="tag" name="tag" value={note.tag} onChange={onChange} minLength={5} required />
                 </div>
                
                 <button disabled={note.title.length<5 || note.description.length<5} type="submit" className="btn btn-primary" onClick={handleClick}>Add Note</button>
+=======
+                <div className="mb-3 form-check">
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" className="btn btn-primary" onClick={handleClick}>Add Note</button>
+>>>>>>> parent of 5bedc25 (Video 66 completed)
             </form>
         </div>
     )

@@ -38,6 +38,7 @@ const NoteState = (props) => {
   }
 
   // Delete a Note
+<<<<<<< HEAD
   const deleteNote = async (id) => {
     // API Call
     const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
@@ -48,10 +49,14 @@ const NoteState = (props) => {
       }
     });
     const json = response.json(); 
+=======
+  const deleteNote = (id) => {
+    // TODO: API Call
+    console.log("Deleting the note with id" + id);
+>>>>>>> parent of 5bedc25 (Video 66 completed)
     const newNotes = notes.filter((note) => { return note._id !== id })
     setNotes(newNotes)
   }
-
   // Edit a Note
   const editNote = async (id, title, description, tag) => {
     // API Call 

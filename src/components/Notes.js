@@ -1,15 +1,19 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, {useContext, useEffect} from 'react'
 import noteContext from "../context/notes/noteContext"
 import Noteitem from './Noteitem';
 import AddNote from './AddNote';
 
 const Notes = () => {
     const context = useContext(noteContext);
+<<<<<<< HEAD
     const { notes, getNotes, editNote } = context;
+=======
+    const {notes, getNotes} = context;
+>>>>>>> parent of 5bedc25 (Video 66 completed)
     useEffect(() => {
         getNotes()
-        // eslint-disable-next-line
     }, [])
+<<<<<<< HEAD
     const ref = useRef(null)
     const refClose = useRef(null)
     const [note, setNote] = useState({id: "", etitle: "", edescription: "", etag: ""})
@@ -76,6 +80,18 @@ const Notes = () => {
                 })}
             </div>
         </>
+=======
+    return (
+        <>
+        <AddNote/>
+        <div className="row my-3">
+            <h2>You Notes</h2> 
+            {notes.map((note)=>{
+                return <Noteitem key={note._id} note={note}/>  
+            })}
+            </div>
+            </>
+>>>>>>> parent of 5bedc25 (Video 66 completed)
     )
 }
 
